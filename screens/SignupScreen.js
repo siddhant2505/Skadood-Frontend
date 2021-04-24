@@ -1,9 +1,5 @@
 import React,{useEffect, useState} from 'react'
-<<<<<<< HEAD
 import { StyleSheet, StatusBar,Text, View, KeyboardAvoidingView,Input,Image,Button } from 'react-native'
-=======
-import { StyleSheet, StatusBar,Text, View, KeyboardAvoidingView, Linking } from 'react-native'
->>>>>>> 3ba468639d362f911c88e5310641d9666b826a45
 //import {StatusBar} from "react-native-vector-icons"
 //import {Button, Input, Image} from "react-native-elements"
 import { auth } from '../firebase';
