@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "186522170611",
+    "project_id": "skadood-e3c8d",
+    "storage_bucket": "skadood-e3c8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186522170611:android:1734a20f3d69a4aca03386",
+        "android_client_info": {
+          "package_name": "com.skadood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186522170611-nehqgouu0fnavl8rtgr594frsd1bfpac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRXQdLZEjumAf6qelNO6N-718o07IuxqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186522170611-nehqgouu0fnavl8rtgr594frsd1bfpac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
