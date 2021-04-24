@@ -1,11 +1,37 @@
 import React,{useEffect, useState} from 'react'
+<<<<<<< HEAD
 import { StyleSheet, StatusBar,Text, View, KeyboardAvoidingView,Input,Image,Button } from 'react-native'
+=======
+import { StyleSheet, StatusBar,Text, View, KeyboardAvoidingView, Linking } from 'react-native'
+>>>>>>> 3ba468639d362f911c88e5310641d9666b826a45
 //import {StatusBar} from "react-native-vector-icons"
 //import {Button, Input, Image} from "react-native-elements"
 import { auth } from '../firebase';
 
 
 const SignupScreen = ({navigation}) => {
+
+
+    const setToken = () => {
+		fetch('https://ancient-wave-59600.herokuapp.com/create-user', {
+			method: 'POST',
+			mode: 'cors',
+			cache: 'no-cache',
+			credentials: 'same-origin',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			redirect: 'follow',
+			referrerPolicy: 'no-referrer'
+		})
+			.then((res) => {
+				return res.json();
+			})
+			.then((result) => {
+				Linking.openURL(result.url);
+			});
+	};
+
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     useEffect(()=>{
@@ -34,6 +60,7 @@ const SignupScreen = ({navigation}) => {
             </View>
 
             <Button containerStyle={styles.button} onPress={signIn} title="Login"/>
+            <Button containerStyle={styles.button} onPress={setToken} title="Test"/>
             <Button onPress={()=>navigation.navigate("Register")} containerStyle={styles.button} type="outline" title="Register"/>
         </KeyboardAvoidingView>
     )
@@ -58,3 +85,4 @@ const styles = StyleSheet.create({
         marginTop:10,
     },
 })
+
