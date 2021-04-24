@@ -8,6 +8,8 @@
 
 import React from 'react';
 import {Node} from 'react';
+import {createStackNavigator} from "@react-navigation/stack";
+import { NavigationContainer } from '@react-navigation/native';
 import {
   SafeAreaView,
   ScrollView,
@@ -25,6 +27,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SignupScreen from './screens/SignupScreen';
 
 const Section = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -44,6 +47,8 @@ const Section = ({children, title}) => {
   );
 };
 
+const Stack=createStackNavigator();
+
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -52,33 +57,13 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={globalScreenOptions}>
+      <Stack.Screen name="Signup" component={SignupScreen}/>
+     
+     
+      </Stack.Navigator></NavigationContainer>
+   
   );
 };
 
