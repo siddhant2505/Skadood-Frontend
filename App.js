@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-timport {Node} from 'react';
+import {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -30,15 +30,7 @@ const Section = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
-      <Tet
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Tet>
+      
       <Text
         style={[
           styles.sectionDescription,
